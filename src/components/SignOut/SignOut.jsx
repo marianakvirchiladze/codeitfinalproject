@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./SignOut.module.css";
 import { useRouter } from "next/navigation";
 
 const SignOut = () => {
