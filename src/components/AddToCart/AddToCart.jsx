@@ -1,8 +1,11 @@
 "use client";
 
+import styles from "./AddToCart.module.css";
+
 function AddToCart({ product }) {
   const handleAddCart = async () => {
     const results = await JSON.parse(localStorage.getItem("products"));
+
     if (results === null) {
       localStorage.setItem(
         "products",
@@ -21,7 +24,11 @@ function AddToCart({ product }) {
     }
   };
 
-  return <button onClick={handleAddCart}>Add to Cart</button>;
+  return (
+    <button onClick={handleAddCart} className={styles.button}>
+      Add to Cart
+    </button>
+  );
 }
 
 export default AddToCart;
